@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "github.com/MrDavudov/demo-grpc/adder";
+
+
+message AddRequest {
+    int32 x = 1;
+    int32 y = 2;
+}
+
+message AddResponce {
+    int32 result = 1;
+}
+
+service Adder {
+    rpc Add(AddRequest) returns (AddResponce);
+}
